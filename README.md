@@ -22,18 +22,12 @@ In this challenge, there is use of Python and unsupervised learning to predict i
   *  create a data frame with the PCA data and plot the elbow curve
   ### We found that based on the elbow curve, the best value for 'K' is 4 with the PCA data.  This is the same 'k' value as found using the original data
 ## Cluster Cryptocurrencies with K-means Using the PCA Data  
+  * clustered Cryptocurrencies with K-means Using the PCA Data
+  * plotted the cluster graph using hvPlot by setting the x-axis as 'PCA1' and the y-axis as 'PCA2'.
+## Visualize and Compare the Results
+  * created combined Elbow Chart and combined cluster charts
+  ### After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data using K-Means? The PCA Inertia is slightly lower than for the origional data.  However the changes did not affect the best value for 'k' which was 4 for both elbow curves.  The scatter plots both had out liers although in differemnt quadrents.  the PCA computations tightened up the pattern, but may have lead to over simplification and loss of information.
 
-Does it differ from the best k value found using the original data?
-Cluster Cryptocurrencies with K-means Using the PCA Data
-Use the following steps to cluster the cryptocurrencies for the best value for k on the PCA data:
-
-### Initialize the K-means model with the best value for k.
-Fit the K-means model using the PCA data.
-Predict the clusters to group the cryptocurrencies using the PCA data.
-Create a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
-Create a scatter plot using hvPlot as follows:
-Set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d".
-Color the graph points with the labels found using K-means.
-Add the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
-### Answer the following question:
-What is the impact of using fewer features to cluster the data using K-Means?
+## Acknowledgements:
+ * ChatGPT - getting rid of warningh message: "UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=1."  which required adding import os and os.environ['OMP_NUM_THREADS'] = '1', reinstalling "pip install hvplot", and using MiniBatchKMeans from from sklearn.cluster.
+ * Stack Overflow - how to change the colors on the scatter plots so the groupings could be determined for the combined plot
