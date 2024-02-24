@@ -2,18 +2,6 @@
 
 In this challenge, you’ll use your knowledge of Python and unsupervised learning to predict if cryptocurrencies are affected by 24-hour or 7-day price changes.
 
-## Before You Begin
-Create a new repository for this project called CryptoClustering. Do not add this homework to an existing repository.
-
-Clone the new repository to your computer.
-
-Push your changes to GitHub.
-
-## Files
-Download the following files to help you get started:
-
-Module 19 Challenge filesLinks to an external site.
-
 ## Instructions
 Rename the Crypto_Clustering_starter_code.ipynb file as Crypto_Clustering.ipynb.
 
@@ -42,7 +30,7 @@ Answer the following question in your notebook: What is the best value for k?
 Cluster Cryptocurrencies with K-means Using the Original Scaled Data
 Use the following steps to cluster the cryptocurrencies for the best value for k on the original scaled data:
 
-Initialize the K-means model with the best value for k.
+### Initialize the K-means model with the best value for k.
 Fit the K-means model using the original scaled DataFrame.
 Predict the clusters to group the cryptocurrencies using the original scaled DataFrame.
 Create a copy of the original data and add a new column with the predicted clusters.
@@ -53,7 +41,7 @@ Add the "coin_id" column in the hover_cols parameter to identify the cryptocurre
 Optimize Clusters with Principal Component Analysis
 Using the original scaled DataFrame, perform a PCA and reduce the features to three principal components.
 
-Retrieve the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook:
+### Retrieve the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook:
 
 What is the total explained variance of the three principal components?
 Create a new DataFrame with the PCA data and set the "coin_id" index from the original DataFrame as the index for the new DataFrame.
